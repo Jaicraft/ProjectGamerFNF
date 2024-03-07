@@ -1,59 +1,38 @@
+/* styles.css */
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    color: #f0f0f0; 
+    font-family: Arial, sans-serif;
+    color: #ffffff;
     overflow: hidden;
-    margin: 0; 
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .rounded {
     border-radius: 10px;
 }
 
-header {
-    background-color: rgba(0, 0, 0, 0.7);
+#home {
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     text-align: center;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
-
-nav {
-    background-color: #303030;  /* Example color */
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex; /* For horizontal layout  */
-    justify-content: space-around; /* Distribute links  */
-}
-
-nav li a {
-    color: #fff; 
-    text-decoration: none;
-} 
 
 #disclaimer {
-    background-color: rgba(255, 50, 50, 0.8); 
-    padding: 15px; 
+    background-color: rgba(255, 102, 102, 0.8);
+    padding: 10px;
     text-align: center;
+    border-radius: 10px;
     margin: 20px;
 }
 
 #welcome {
-    background-color: rgba(0, 0, 0, 0.6);
     margin: 20px;
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 
-/* -------  Add more styles below  ------- */
-
-/* Layout - Use Grid or Flexbox for main structure */
-
-/* Typography - Headings, paragraph sizes, fonts */
-
-/* Buttons and links   */
-
-/* Images and media */ 
-
-/* Specific styles for games, chat section, etc. */
+/* Add more styles here */
