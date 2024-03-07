@@ -1,0 +1,59 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    color: #f0f0f0; 
+    overflow: hidden;
+    margin: 0; 
+}
+
+.rounded {
+    border-radius: 10px;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #303030;  /* Example color */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* For horizontal layout  */
+    justify-content: space-around; /* Distribute links  */
+}
+
+nav li a {
+    color: #fff; 
+    text-decoration: none;
+} 
+
+#disclaimer {
+    background-color: rgba(255, 50, 50, 0.8); 
+    padding: 15px; 
+    text-align: center;
+    margin: 20px;
+}
+
+#welcome {
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 20px;
+    padding: 20px;
+}
+
+/* -------  Add more styles below  ------- */
+
+/* Layout - Use Grid or Flexbox for main structure */
+
+/* Typography - Headings, paragraph sizes, fonts */
+
+/* Buttons and links   */
+
+/* Images and media */ 
+
+/* Specific styles for games, chat section, etc. */
