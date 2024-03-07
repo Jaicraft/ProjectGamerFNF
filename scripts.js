@@ -8,19 +8,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Dotted shapes with dynamic loading
-const dotsContainer = document.querySelector('.dots-container');
-const numDots = 50; 
+// Simple script to animate dots
+document.addEventListener('DOMContentLoaded', () => {
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach(dot => {
+        dot.style.animationDelay = `${Math.random() * 5}s`;
+    });
+});
 
-function createDot() {
-  const dot = document.createElement('div');
-  dot.classList.add('dot');
-  // ... set randomized position, animation delay etc.
-  return dot;
-}
-
-for (let i = 0; i < numDots; i++) {
-  dotsContainer.appendChild(createDot());
 }
 
 // Loading indicator
