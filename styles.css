@@ -1,63 +1,55 @@
-body {
-    font-family: Arial, sans-serif;
-    color: #f0f0f0; /* Off-white */
-    margin: 0; /* Remove default margins */
-    overflow: hidden;
+/* Base styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    background: linear-gradient(45deg, #1c1c1c, #333333);
+    background-size: 400% 400%;
+    animation: background-animation 20s ease infinite;
 }
 
-/* Accessibility */
-.skip-link { 
-    position: absolute;
-    top: -30px;
-    left: 0;
-    background: #333;
-    color: #fff;
-    padding: 8px;
-    z-index: 100; /* Ensure it's on top */
-}
-.skip-link:focus {
-    top: 0;
+/* Animation for background */
+@keyframes background-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-/* Visuals */
-.rounded {
+/* Common section styles */
+.section {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Header styles */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
     border-radius: 10px;
 }
 
-#home { 
-    background-color: rgba(50, 50, 50, 0.7); /* Darker background */
-    padding: 20px;
+/* Footer styles */
+footer {
     text-align: center;
-} 
-
-#disclaimer {
-    background-color: rgba(210, 50, 50, 0.8); /* Slightly toned down */
     padding: 10px;
-    text-align: center;
-    margin: 20px;
-}
-
-#welcome {
-    margin: 20px;
-    padding: 20px;
-    background-color: rgba(50, 50, 50, 0.7); 
-}
-
-#loading-indicator {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    display: none; /* Initially hidden */
-}
-
-.dots-container {
-    position: fixed;
-    top: 0;
-    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    height: 100%;
-    overflow: hidden; /* Avoid scrollbars */
 }
-/* ... remaining styles ... */
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .section, header, footer {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+/* Add more styles as needed */
