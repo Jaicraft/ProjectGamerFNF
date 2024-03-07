@@ -3,85 +3,25 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Project Gamer</title>
+   <title>Project Gamer - Ultimate Gaming Hub</title>
    <link rel="stylesheet" href="styles.css">
-   <style>
-       /* Cool background */
-       body {
-           background: linear-gradient(45deg, #1c1c1c, #333333);
-           background-size: 400% 400%;
-           animation: background-animation 20s ease infinite;
-       }
-
-       @keyframes background-animation {
-           0% {
-               background-position: 0% 50%;
-           }
-           50% {
-               background-position: 100% 50%;
-           }
-           100% {
-               background-position: 0% 50%;
-           }
-       }
-
-       /* Dotted shapes */
-       .dot {
-           position: absolute;
-           width: 10px;
-           height: 10px;
-           border-radius: 50%;
-           background-color: rgba(255, 255, 255, 0.3);
-           animation: dot-animation 10s linear infinite;
-       }
-
-       @keyframes dot-animation {
-           0% {
-               transform: translateY(100vh);
-           }
-           100% {
-               transform: translateY(-100%);
-           }
-       }
-   </style>
+   <style> /* Existing styles will be moved to styles.css */ </style>
 </head>
 <body>
-   <div id="home">
-       <h1>Welcome to the Ultimate Gaming Hub!</h1>
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+   <div id="home" role="banner">
+       <h1>Welcome to Project Gamer!</h1>
    </div>
-   <div id="disclaimer" class="rounded">
+   <div id="disclaimer" class="rounded" role="alert">
        <p><strong>DISCLAIMER: This site is for educational and entertainment purposes only. DO NOT COPY THE SITE. DO YOUR OWN WORK.</strong></p>
    </div>
-   <div id="welcome" class="rounded">
-       <h2>Welcome to Project Gamer!</h2>
-       <p>Greetings, fellow gamers! Project Gamer is an epic collaboration site between Terry, Dipan, Nom, Tyler, Marwan(no more), Elijah, and other gaming enthusiasts!</p>
-
-       <p>This site aims to be the ultimate hub for all of your gaming needs. Here, you can find unblocked games, chat with friends, and immerse yourself in an incredible gaming experience! The site is regularly updated with the latest and greatest games, so you'll always have something new and exciting to explore.</p>
-
-       <p>Check out the P-r-o-x-y tab for a powerful proxy that allows you to easily access unblocked games and websites. Unleash your gaming potential and navigate the web without restrictions!</p>
-
-       <p>Don't forget to visit the Social Tab, where you can chat with fellow gamers and form epic gaming squads! One of the newest and coolest features is the Video Chat, which allows you to chat with other gamers via audio and video. You can even stream games, movies, and anime while chatting with your friends!</p>
-
-       <p>Dive into the world of Minecraft, watch your favorite YouTube channels, or chill out with some casual games. If you're feeling competitive, challenge your friends to intense multiplayer battles! You can also create tier lists, share your gaming experiences, and engage in lively discussions.</p>
-
-       <p>As always, we encourage you to recommend games that you think should be added to the site. Your input helps us curate the best gaming experience for everyone.</p>
-
-       <p>So, grab your controller, keyboard, or mouse, and get ready for an unforgettable gaming adventure! Have fun, and happy gaming!</p>
-
-       <p>- Project Gamer Dev Team</p>
-   </div>
-
-   <!-- Dotted shapes -->
-   <div class="dot"></div>
-   <div class="dot"></div>
-   <div class="dot"></div>
-   <div class="dot"></div>
-   <div class="dot"></div>
-   <div class="dot"></div>
-   <div class="dot"></div>
-   <div class="dot"></div>
-   <div class="dot"></div>
-   <div class="dot"></div>
+   <main id="main-content">
+     <div id="welcome" class="rounded" role="region" aria-labelledby="welcome-heading">
+       <h2 id="welcome-heading">Welcome to Project Gamer!</h2>
+       </div>
+     <div class="dots-container"></div>
+     <div id="loading-indicator">Loading...</div> 
+   </main>
 
    <script src="scripts.js"></script>
 </body>
