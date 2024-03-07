@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Project Gamer - Your Ultimate Gaming Hub</title>
+   <link rel="stylesheet" href="styles.css">
+   <style>
+       /* Cool background */
+       body {
+           background: linear-gradient(45deg, #1c1c1c, #333333);
+           background-size: 400% 400%;
+           animation: background-animation 20s ease infinite;
+           margin: 0; /* Remove default body margins */
+       }
+
+       @keyframes background-animation {
+           0% {
+               background-position: 0% 50%;
+           }
+           50% {
+               background-position: 100% 50%;
+           }
+           100% {
+               background-position: 0% 50%;
+           }
+       }
+
+       /* Dotted shapes */
+       .dot {
+           position: absolute;
+           width: 10px;
+           height: 10px;
+           border-radius: 50%;
+           background-color: rgba(255, 255, 255, 0.3);
+           animation: dot-animation 10s linear infinite;
+       }
+
+       @keyframes dot-animation {
+           0% {
+               transform: translateY(100vh);
+           }
+           100% {
+               transform: translateY(-100%);
+           }
+       }
+   </style>
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Games</a></li>
+          <li><a href="#">Chat</a></li>
+          <li><a href="#">Proxy</a></li>
+        </ul>
+    </nav> 
+    <h1>Welcome to Project Gamer!</h1>
+  </header>
+
+  <main>  
+    <section id="disclaimer" class="rounded">
+      <p><strong>DISCLAIMER: This site is for educational and entertainment purposes only. DO NOT COPY THE SITE. DO YOUR OWN WORK.</strong></p>
+    </section>
+
+    <section id="welcome" class="rounded">
+      <h2>Welcome to Project Gamer!</h2>
+      <p>Greetings, fellow gamers! Project Gamer is an epic collaboration site between Terry, Dipan, Nom, Tyler, Elijah, and other gaming enthusiasts!</p>
+      </section> 
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Project Gamer Dev Team</p>
+  </footer>
+
+  <div class="dot"></div>
+   <div class="dot"></div>
+   <div class="dot"></div>
+   <div class="dot"></div>
+   <div class="dot"></div>
+   <div class="dot"></div>
+   <div class="dot"></div>
+   <div class="dot"></div>
+   <div class="dot"></div>
+   <div class="dot"></div>
+
+   <script src="scripts.js"></script>
+</body>
+</html>
