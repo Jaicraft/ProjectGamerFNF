@@ -1,38 +1,63 @@
-/* styles.css */
-
 body {
     font-family: Arial, sans-serif;
-    color: #ffffff;
+    color: #f0f0f0; /* Off-white */
+    margin: 0; /* Remove default margins */
     overflow: hidden;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Accessibility */
+.skip-link { 
+    position: absolute;
+    top: -30px;
+    left: 0;
+    background: #333;
+    color: #fff;
+    padding: 8px;
+    z-index: 100; /* Ensure it's on top */
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* Visuals */
 .rounded {
     border-radius: 10px;
 }
 
-#home {
-    background-color: rgba(0, 0, 0, 0.5);
+#home { 
+    background-color: rgba(50, 50, 50, 0.7); /* Darker background */
     padding: 20px;
     text-align: center;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-}
+} 
 
 #disclaimer {
-    background-color: rgba(255, 102, 102, 0.8);
+    background-color: rgba(210, 50, 50, 0.8); /* Slightly toned down */
     padding: 10px;
     text-align: center;
-    border-radius: 10px;
     margin: 20px;
 }
 
 #welcome {
     margin: 20px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
+    background-color: rgba(50, 50, 50, 0.7); 
 }
 
-/* Add more styles here */
+#loading-indicator {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    display: none; /* Initially hidden */
+}
+
+.dots-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Avoid scrollbars */
+}
+/* ... remaining styles ... */
