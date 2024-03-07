@@ -1,38 +1,28 @@
-// scripts.js
-
-// Animate dotted shapes
-const dots = document.querySelectorAll('.dot');
-
-dots.forEach((dot, index) => {
-  const delay = (index + 1) * 1000; // Add a delay for each dot
-  dot.style.animationDelay = `${delay}ms`;
+// Smooth scrolling 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
 
-// Toggle dark/light mode
-let isDarkMode = true;
+// Dotted shapes with dynamic loading
+const dotsContainer = document.querySelector('.dots-container');
+const numDots = 50; 
 
-const toggleMode = () => {
-  const body = document.querySelector('body');
-  const homeBg = document.querySelector('#home');
-  const welcomeBg = document.querySelector('#welcome');
+function createDot() {
+  const dot = document.createElement('div');
+  dot.classList.add('dot');
+  // ... set randomized position, animation delay etc.
+  return dot;
+}
 
-  if (isDarkMode) {
-    body.style.backgroundColor = '#ffffff';
-    body.style.color = '#333333';
-    homeBg.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
-    welcomeBg.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
-  } else {
-    body.style.backgroundColor = '#1c1c1c';
-    body.style.color = '#ffffff';
-    homeBg.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-    welcomeBg.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-  }
+for (let i = 0; i < numDots; i++) {
+  dotsContainer.appendChild(createDot());
+}
 
-  isDarkMode = !isDarkMode;
-};
-
-// Add toggle mode button
-const modeToggle = document.createElement('button');
-modeToggle.textContent = 'Toggle Mode';
-modeToggle.addEventListener('click', toggleMode);
-document.body.appendChild(modeToggle);
+// Loading indicator
+const loadingIndicator = document.getElementById('loading-indicator');
+// ...logic to show loading indicator when content is loading, then hide it
