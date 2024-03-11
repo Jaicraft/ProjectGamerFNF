@@ -1,23 +1,39 @@
-// Smooth scrolling 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+// scripts.js
 
-// Simple script to animate dots
-document.addEventListener('DOMContentLoaded', () => {
-    const dots = document.querySelectorAll('.dot');
-    dots.forEach(dot => {
-        dot.style.animationDelay = `${Math.random() * 5}s`;
-    });
-});
+// Function to create dotted shapes
+function createDottedShapes() {
+    const dotsContainer = document.querySelector('.dots-container');
 
+    for (let i = 0; i < 50; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        dot.style.left = `${Math.random() * window.innerWidth}px`;
+        dot.style.animationDelay = `${Math.random() * 10}s`;
+        dot.style.animationDuration = `${Math.random() * 5 + 5}s`;
+        dotsContainer.appendChild(dot);
+    }
 }
 
-// Loading indicator
-const loadingIndicator = document.getElementById('loading-indicator');
-// ...logic to show loading indicator when content is loading, then hide it
+// Function to handle smooth scrolling
+function smoothScroll(target) {
+    const element = document.querySelector(target);
+    element.scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
+// Function to handle navigation clicks
+function handleNavClick(event) {
+    event.preventDefault();
+    const target = event.target.getAttribute('href');
+    smoothScroll(target);
+}
+
+// Add event listeners to navigation links
+const navLinks = document.querySelectorAll('nav ul li a');
+navLinks.forEach(link => {
+    link.addEventListener('click', handleNavClick);
+});
+
+// Create dotted shapes
+createDottedShapes();
